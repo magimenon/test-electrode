@@ -14,92 +14,91 @@
  *
  */
 
-import React from "react";
-import { connect } from "react-redux";
-import "../styles/raleway.css";
-import custom from "../styles/custom.css"; // eslint-disable-line no-unused-vars
-import electrodePng from "../images/electrode.png";
-import DemoStates from "./demo-states";
-import DemoPureStates from "./demo-pure-states";
-import { DemoButtons } from "./demo-buttons";
-import DemoDynamicImport from "./demo-dynamic-import";
-import { Nav } from "./nav";
+import React from 'react'
+import { connect } from 'react-redux'
+import '../styles/raleway.css'
+import custom from '../styles/custom.css' // eslint-disable-line no-unused-vars
+import electrodePng from '../images/electrode.png'
+import DemoStates from './demo-states'
+import DemoPureStates from './demo-pure-states'
+import { DemoButtons } from './demo-buttons'
+import DemoDynamicImport from './demo-dynamic-import'
+import { Nav } from './nav'
 
 //
-import DemoCookies from "./demo-cookies";
-//
-
-//
-import config from "electrode-ui-config";
+import DemoCookies from './demo-cookies'
 //
 
 //
-import Notifications from "react-notify-toast";
+import config from 'electrode-ui-config'
+//
+
+//
+import Notifications from 'react-notify-toast'
 //
 
 class Home extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
   }
 
-  render() {
+  render () {
     return (
-      <div styleName={"custom.container"}>
+      <div styleName={'custom.container'}>
         <Nav {...this.props} />
 
         {/**/}
         <Notifications />
         {/**/}
 
-        <section styleName={"custom.header"}>
+        <section styleName={'custom.header'}>
           <h2>
-            <span>Hello from </span>
-            <a href="https://github.com/electrode-io">
-              {"Electrode"}
+            <span>Hey this is a new nice course </span>
+            <a href='https://github.com/electrode-io'>
+              {'Electrode'}
               <img src={electrodePng} />
             </a>
           </h2>
         </section>
 
-        <div styleName={"custom.docs-section"}>
+        <div styleName={'custom.docs-section'}>
           <DemoStates />
         </div>
 
-        <div styleName={"custom.docs-section"}>
+        <div styleName={'custom.docs-section'}>
           <DemoPureStates />
         </div>
 
         {/**/}
-        <div styleName={"custom.docs-section"}>
+        <div styleName={'custom.docs-section'}>
           <DemoCookies />
         </div>
         {/**/}
 
         {/**/}
-        <div styleName={"custom.docs-section"}>
-          <h6 styleName={"custom.docs-header"}>Demo Isomorphic UI Config</h6>
+        <div styleName={'custom.docs-section'}>
+          <h6 styleName={'custom.docs-header'}>Demo Isomorphic UI Config</h6>
           <div>config.ui.demo: "{config.ui.demo}"</div>
         </div>
         {/**/}
 
-        <div styleName={"custom.docs-section"}>
+        <div styleName={'custom.docs-section'}>
           <DemoButtons />
         </div>
 
-        <div styleName={"custom.docs-section"}>
-          <DemoDynamicImport/>
+        <div styleName={'custom.docs-section'}>
+          <DemoDynamicImport />
         </div>
-
       </div>
-    );
+    )
   }
 }
 
-Home.propTypes = {};
+Home.propTypes = {}
 
-const mapStateToProps = state => state;
+const mapStateToProps = state => state
 
 export default connect(
   mapStateToProps,
   dispatch => ({ dispatch })
-)(Home);
+)(Home)
